@@ -6,6 +6,18 @@ import { AppComponent } from './app.component';
 import { NewsAddComponent } from './news-add/news-add.component';
 import { NewsViewComponent } from './news-view/news-view.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const myRoute:Routes=[
+  {
+    path:"",
+    component:NewsAddComponent
+  },
+  {
+    path:"view",
+    component:NewsViewComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -16,7 +28,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
