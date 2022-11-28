@@ -7,6 +7,7 @@ import { NewsAddComponent } from './news-add/news-add.component';
 import { NewsViewComponent } from './news-view/news-view.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { NewsSearchComponent } from './news-search/news-search.component';
 
 const myRoute:Routes=[
   {
@@ -16,6 +17,10 @@ const myRoute:Routes=[
   {
     path:"view",
     component:NewsViewComponent
+  },
+  {
+    path:"search",
+    component:NewsSearchComponent
   }
 ]
 
@@ -24,7 +29,8 @@ const myRoute:Routes=[
     AppComponent,
     NewsAddComponent,
     NewsViewComponent,
-    NavbarComponent
+    NavbarComponent,
+    NewsSearchComponent
   ],
   imports: [
     BrowserModule,
